@@ -4,6 +4,7 @@ import Contact from './components/Contact';
 import Projects from './components/Projects';
 import { HashRouter as Router, Routes, Route, Navigate } from 'react-router-dom';
 
+//test
 export default function App() {
   return (
     <Router>
