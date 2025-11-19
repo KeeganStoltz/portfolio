@@ -3,7 +3,8 @@ import Spline from '@splinetool/react-spline';
 const Hero = () => {
     // Download CV handler
     const downloadCV = async () => {
-        const filePath = '/Keegan_Stoltz_CV.pdf'; // put your CV in the public folder with this name
+        const filePath = `${import.meta.env.BASE_URL}Keegan_Stoltz_CV.pdf`; 
+        console.log('Downloading CV from:', filePath);
         try {
             const res = await fetch(filePath);
             if (!res.ok) throw new Error('CV not found');
