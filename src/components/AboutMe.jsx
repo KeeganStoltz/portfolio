@@ -1,18 +1,10 @@
-import Header from './Header.jsx';
-import StarryBackground from "../assets/StarryBackground";
 import Spline from '@splinetool/react-spline';
 
 const AboutMe = () => {
     return (
         <main>
-            {/* Starry Background */}
-            <StarryBackground starCount={180} />
-            {/* Blur Effect */}
-            <div className="h-0 w-[40rem] absolute top-[20%] right-[5%] shadow-[0_0_900px_20px_#e99b63] -rotate-[30deg] -z-10"></div>
-            {/* Header Component */}
-            <Header />
-            <div className="flex lg:mt-20 flex-col lg:flex-row items-center justify-between min-h-[calc(90vh-6rem)]">
-                <div className="max-w-xl ml-[5%] z-10 mt-[90%] md:mt-[60%] lg:mt-0">
+            <div className="lg:mt-20 items-center justify-between inset-0 relative min-h-[calc(90vh-6rem)] flex flex-col lg:flex-row">
+                <div className="ml-[5%] z-10 p-4">
                     {/* Main Heading */}
                     <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-semibold tracking-wider my-8">
                         About Me
@@ -23,7 +15,7 @@ const AboutMe = () => {
                     </p>
                 </div>
                 {/* 3d Image */}
-                <Spline className="absolute top-0 bottom-0 -z-10 scale-75 md:scale-90 lg:scale-100" scene="https://prod.spline.design/dlnTxANk77DA05xc/scene.splinecode" />
+                <Spline className='relative inset-0 -z-10' scene="https://prod.spline.design/dlnTxANk77DA05xc/scene.splinecode" />
             </div>
         </main>
     )

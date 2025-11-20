@@ -19,16 +19,6 @@ export default function StarryBackground({ starCount = 160 }) {
 
   return (
     <div className="fixed inset-0 -z-10 overflow-hidden pointer-events-none">
-      {/* Background gradient */}
-      <div className="absolute inset-0 bg-gradient-to-b from-slate-900 via-black to-indigo-950" />
-
-      {/* Nebula blur */}
-      <div className="absolute left-1/2 top-1/3 -translate-x-1/2 w-[1400px] h-[420px] opacity-20 blur-3xl"
-        style={{
-          background: "radial-gradient(ellipse at center, rgba(255,255,255,0.06), transparent 40%)"
-        }}
-      />
-
       {/* Tiny stars */}
       {stars.map((s) => (
         <span

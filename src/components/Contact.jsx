@@ -1,13 +1,10 @@
-import Header from './Header.jsx';
 import Spline from '@splinetool/react-spline';
 
 const Contact = () => {
     return (
-        <main className="relative min-h-screen">
-            {/* Header Component */}
-            <Header />
+        <main>
             {/* Contact Section */}
-            <div className="absolute inset-0 z-50 mt-[90%] md:mt-[60%] lg:mt-0 mb-50 flex flex-col gap-6 justify-center items-center pointer-events-none">
+            <div className="absolute inset-0 z-50 bottom-0 top-0 flex flex-col gap-6 justify-center items-center pointer-events-none overflow-hidden">
                 <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-semibold tracking-wider my-8">
                     Contact me:
                 </h1>
@@ -26,11 +23,7 @@ const Contact = () => {
             </div>
 
             {/* 3D Image */}
-            <Spline className="absolute lg:top-0 top-[-20%] bottom-0 -z-1 pointer-events-auto" scene="https://prod.spline.design/PI66tiR2MsIaH6Ro/scene.splinecode" />
-
-
-
-
+            <Spline className="absolute top-0 bottom-0 -z-1 pointer-events-auto overflow-hidden" scene="https://prod.spline.design/PI66tiR2MsIaH6Ro/scene.splinecode" />
         </main>
     )
 }
