@@ -1,9 +1,10 @@
-import Spline from '@splinetool/react-spline';
+import React, { Suspense } from 'react';
+const Spline = React.lazy(() => import('@splinetool/react-spline'));
 
 const Hero = () => {
     // Download CV handler
     const downloadCV = async () => {
-        const filePath = `${import.meta.env.BASE_URL}Keegan_Stoltz_CV.pdf`; 
+        const filePath = `${import.meta.env.BASE_URL}Keegan_Stoltz_CV.pdf`;
         console.log('Downloading CV from:', filePath);
         try {
             const res = await fetch(filePath);
@@ -57,9 +58,18 @@ const Hero = () => {
             </div>
 
             {/* 3d Image */}
-            <Spline className="absolute lg:top-0 top-[-20%] bottom-0 right-0 -z-10"
-                scene="https://prod.spline.design/ixJQTDKiAac2De5s/scene.splinecode"
-            />
+
+            <Suspense
+                fallback={
+                    <div className="absolute inset-0 flex items-center justify-center">
+                        <div className="h-10 w-10 animate-spin rounded-full border-4 border-gray-500 border-t-transparent" />
+                    </div>
+                }
+            >
+                <Spline className="absolute lg:top-0 top-[-20%] bottom-0 right-0 -z-10"
+                    scene="https://prod.spline.design/ixJQTDKiAac2De5s/scene.splinecode"
+                />
+            </Suspense>
 
         </main>
     )

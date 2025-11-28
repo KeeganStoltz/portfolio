@@ -1,4 +1,5 @@
-import Spline from '@splinetool/react-spline';
+import React, { Suspense } from 'react';
+const Spline = React.lazy(() => import('@splinetool/react-spline'));
 
 const Contact = () => {
     return (
@@ -23,7 +24,18 @@ const Contact = () => {
             </div>
 
             {/* 3D Image */}
-            <Spline className="absolute top-0 bottom-0 -z-1 pointer-events-auto overflow-hidden" scene="https://prod.spline.design/PI66tiR2MsIaH6Ro/scene.splinecode" />
+            <Suspense
+                fallback={
+                    <div className="absolute inset-0 flex items-center justify-center">
+                        <div className="h-10 w-10 animate-spin rounded-full border-4 border-gray-500 border-t-transparent" />
+                    </div>
+                }
+            >
+                <Spline
+                    className="absolute top-0 bottom-0 -z-1 pointer-events-auto overflow-hidden"
+                    scene="https://prod.spline.design/V8JdVSvMwHTvbtOO/scene.splinecode"
+                />
+            </Suspense>
         </main>
     )
 }
