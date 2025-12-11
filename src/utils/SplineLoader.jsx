@@ -1,0 +1,3 @@
+import React from "react";
+const Spline = React.lazy(() => import("@splinetool/react-spline"));
+export default Spline;
