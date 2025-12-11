@@ -25,7 +25,7 @@ const Contact = () => {
 
             <SplineOnVisible
                 className="absolute top-0 bottom-0 -z-1 pointer-events-auto overflow-hidden spline-container spline-container--interactive"
-                scene="/spline/contact.splinecode"
+                scene={`${import.meta.env.BASE_URL}spline/contact.splinecode`}
             />
         </main>
     );

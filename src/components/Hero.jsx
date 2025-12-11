@@ -58,7 +58,7 @@ const Hero = () => {
 
             <SplineOnVisible
                 className="absolute lg:top-0 top-[-20%] bottom-0 right-0 -z-10 spline-container spline-container--interactive"
-                scene="/spline/hero.splinecode"
+                scene={`${import.meta.env.BASE_URL}spline/hero.splinecode`}
             />
         </main>
     );

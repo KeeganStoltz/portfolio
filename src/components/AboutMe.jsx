@@ -19,7 +19,7 @@ const AboutMe = () => {
 
                 <SplineOnVisible
                     className="relative -z-10 spline-container spline-container--interactive h-[100%] w-[100%] mr-0 lg:w-[40%] lg:h-[40%] lg:mr-[30%]"
-                    scene="/spline/about.splinecode"
+                    scene={`${import.meta.env.BASE_URL}spline/about.splinecode`}
                 />
             </div>
         </main>
