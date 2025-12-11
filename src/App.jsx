@@ -11,7 +11,7 @@ export default function App() {
   return (
     <main>
       {/* Starry Background */}
-      <StarryBackground starCount={180} />
+      <StarryBackground starCount={200} />
      {/* Header Component */}
       <Header />
       <Router>
